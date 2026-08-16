@@ -4658,3 +4658,69 @@ ol {
   border: 0 !important;
   box-shadow: none !important;
 }
+
+/* Hard-stop all hover treatments inside the expanded account card. */
+#userinfo #userinfo_username,
+#userinfo #userinfo_username:hover,
+#userinfo #userinfo_username:focus,
+#userinfo #userinfo_username:focus-within,
+#userinfo #userinfo_username:active {
+  filter: none !important;
+}
+
+#userinfo #userinfo_username a,
+#userinfo #userinfo_username a:hover,
+#userinfo #userinfo_username a:focus,
+#userinfo #userinfo_username a:active,
+#userinfo #userinfo_username li,
+#userinfo #userinfo_username li:hover,
+#userinfo #userinfo_username li:focus-within,
+#userinfo #userinfo_username span,
+#userinfo #userinfo_username span:hover,
+#userinfo #userinfo_username div,
+#userinfo #userinfo_username div:hover {
+  color: inherit !important;
+  box-shadow: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+}
+
+#userinfo #userinfo_username > #nav_userinfo,
+#userinfo #userinfo_username > #nav_userinfo:hover,
+#userinfo #userinfo_username > #nav_userinfo:focus-within {
+  color: var(--text) !important;
+  background: rgba(121, 255, 143, 0.08) !important;
+}
+
+#userinfo #userinfo_username > #nav_donate,
+#userinfo #userinfo_username > #nav_donate:hover,
+#userinfo #userinfo_username > #nav_donate:focus-within,
+#userinfo #userinfo_username > #nav_donate a,
+#userinfo #userinfo_username > #nav_donate a:hover,
+#userinfo #userinfo_username > #nav_donate a:focus {
+  color: var(--accent-bright) !important;
+  background: transparent !important;
+}
+
+#userinfo #userinfo_username > #nav_useredit > a,
+#userinfo #userinfo_username > #nav_useredit > a:hover,
+#userinfo #userinfo_username > #nav_useredit > a:focus,
+#userinfo #userinfo_username > #nav_logout > a,
+#userinfo #userinfo_username > #nav_logout > a:hover,
+#userinfo #userinfo_username > #nav_logout > a:focus {
+  color: var(--text-1) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+#userinfo #userinfo_username > #us_pop a,
+#userinfo #userinfo_username > #us_pop a:hover,
+#userinfo #userinfo_username > #us_pop a:focus,
+#userinfo #userinfo_username > #us_pop a:active {
+  color: var(--text-2) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+}
+
+#userinfo_minor {
+  padding-top: 7px !important;
+  transform: translateY(3px);
+}
