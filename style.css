@@ -3954,6 +3954,81 @@ ol {
   padding-right: 5px !important;
 }
 
+/* Final GGn header card layout: always visible, no hover dependency. */
+#userinfo #userinfo_username,
+#userinfo #userinfo_username:hover,
+#userinfo #userinfo_username:focus-within {
+  display: grid !important;
+  width: 640px !important;
+  min-width: 640px !important;
+  height: 66px !important;
+  min-height: 66px !important;
+  overflow: hidden !important;
+}
+
+#userinfo {
+  padding-right: 670px !important;
+}
+
+#userinfo #userinfo_username > #nav_userinfo,
+#userinfo #userinfo_username > #nav_donate,
+#userinfo #userinfo_username > #nav_useredit,
+#userinfo #userinfo_username > #nav_logout,
+#userinfo #userinfo_username > #us_pop {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#userinfo #userinfo_username > #nav_donate {
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+}
+
+#userinfo #userinfo_username > #nav_useredit {
+  grid-column: 4 !important;
+  grid-row: 1 !important;
+}
+
+#userinfo #userinfo_username > #nav_logout {
+  grid-column: 5 !important;
+  grid-row: 1 !important;
+}
+
+#userinfo #userinfo_username {
+  grid-template-columns: minmax(115px, auto) minmax(0, 1fr) auto auto auto !important;
+}
+
+#alerts {
+  position: absolute !important;
+  top: 29px !important;
+  right: calc(clamp(22px, 3vw, 46px) + 312px) !important;
+  left: auto !important;
+  z-index: 65 !important;
+  width: auto !important;
+  height: 24px !important;
+}
+
+#alerts .alertbar,
+#alerts .alertbar.blend {
+  min-height: 24px !important;
+  padding: 0 8px !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  border-color: rgba(121, 255, 143, 0.28) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  font-size: 11px !important;
+}
+
+#alerts .alertbar::before {
+  font-size: 14px !important;
+}
+
+.global_buffs,
+.individual_buff {
+  display: none !important;
+}
+
 @media (max-width: 900px) {
   #userinfo #userinfo_username {
     position: static !important;
