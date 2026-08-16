@@ -3726,6 +3726,234 @@ ol {
   display: none !important;
 }
 
+/* Expanded right-side account card; no hover behavior. */
+#userinfo {
+  grid-template-columns: minmax(0, 1fr) !important;
+  grid-template-rows: 22px 25px !important;
+  row-gap: 1px !important;
+  min-height: 48px !important;
+  padding-right: 640px !important;
+}
+
+#userinfo_stats {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  padding-top: 0 !important;
+}
+
+#userinfo_minor {
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  justify-self: end !important;
+  padding-top: 3px !important;
+}
+
+#userinfo #userinfo_username,
+#userinfo #userinfo_username:hover,
+#userinfo #userinfo_username:focus-within {
+  position: absolute !important;
+  top: 22px !important;
+  right: clamp(22px, 3vw, 46px) !important;
+  z-index: 45 !important;
+  display: grid !important;
+  grid-template-columns: minmax(115px, auto) minmax(0, 1fr) auto auto !important;
+  grid-template-rows: 24px 26px !important;
+  gap: 5px 7px !important;
+  align-items: center !important;
+  width: 610px !important;
+  min-width: 610px !important;
+  height: 66px !important;
+  min-height: 66px !important;
+  margin: 0 !important;
+  padding: 7px 9px !important;
+  overflow: hidden !important;
+  color: var(--text-1) !important;
+  background: linear-gradient(180deg, rgba(12, 25, 15, 0.96), rgba(7, 14, 9, 0.97)) !important;
+  border: 1px solid rgba(121, 255, 143, 0.32) !important;
+  border-radius: 12px !important;
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.36),
+    0 0 18px rgba(121, 255, 143, 0.08) !important;
+}
+
+#userinfo #userinfo_username::before,
+#userinfo #userinfo_username::after {
+  content: none !important;
+  display: none !important;
+}
+
+#userinfo #userinfo_username > li,
+#userinfo #userinfo_username > div,
+#userinfo #userinfo_username:hover > li,
+#userinfo #userinfo_username:hover > div,
+#userinfo #userinfo_username:focus-within > li,
+#userinfo #userinfo_username:focus-within > div {
+  display: flex !important;
+}
+
+#userinfo #userinfo_username > #nav_userinfo {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  justify-content: flex-start !important;
+  padding: 0 7px !important;
+  font-size: 0 !important;
+  background: rgba(121, 255, 143, 0.08) !important;
+  border-radius: 8px !important;
+}
+
+#userinfo #userinfo_username > #nav_userinfo::before {
+  content: "account_circle";
+  margin-right: 5px;
+  color: var(--accent-bright);
+  font-family: "Material Symbols Rounded";
+  font-size: 15px;
+  line-height: 1;
+}
+
+#userinfo #userinfo_username > #nav_userinfo::after {
+  content: none !important;
+  display: none !important;
+}
+
+#userinfo #userinfo_username > #nav_userinfo .username {
+  color: var(--text) !important;
+  font-size: 12px !important;
+  font-weight: 750 !important;
+}
+
+#userinfo #userinfo_username > #nav_donate {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  width: auto !important;
+  min-height: 24px !important;
+  padding: 0 7px !important;
+  font-size: 11.5px !important;
+}
+
+#userinfo #userinfo_username > #nav_donate strong,
+#userinfo #userinfo_username > #nav_donate a,
+#userinfo #userinfo_username > #nav_donate span {
+  display: inline !important;
+  width: auto !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+  font-size: 11.5px !important;
+  line-height: 1 !important;
+}
+
+#userinfo #userinfo_username > #nav_useredit,
+#userinfo #userinfo_username > #nav_logout {
+  grid-row: 1 !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 24px !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+#userinfo #userinfo_username > #nav_useredit {
+  grid-column: 3 !important;
+}
+
+#userinfo #userinfo_username > #nav_logout {
+  grid-column: 4 !important;
+}
+
+#userinfo #userinfo_username > #nav_useredit > a,
+#userinfo #userinfo_username > #nav_logout > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 24px !important;
+  min-width: 24px !important;
+  height: 24px !important;
+  min-height: 24px !important;
+  padding: 0 !important;
+  color: var(--text-1) !important;
+  background: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 7px !important;
+  font-size: 0 !important;
+}
+
+#userinfo #userinfo_username > #nav_useredit > a::before {
+  content: "edit" !important;
+}
+
+#userinfo #userinfo_username > #nav_logout > a::before {
+  content: "logout" !important;
+}
+
+#userinfo #userinfo_username > #nav_useredit > a::before,
+#userinfo #userinfo_username > #nav_logout > a::before {
+  color: var(--text-1);
+  font-family: "Material Symbols Rounded";
+  font-size: 15px;
+  line-height: 1;
+}
+
+#userinfo #userinfo_username > #us_pop,
+#userinfo #userinfo_username:hover > #us_pop,
+#userinfo #userinfo_username:focus-within > #us_pop {
+  position: static !important;
+  grid-column: 1 / -1 !important;
+  grid-row: 2 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: 4px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 26px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#userinfo #userinfo_username > #us_pop span {
+  display: inline-flex !important;
+  flex: 0 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+#userinfo #userinfo_username > #us_pop a {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 22px !important;
+  padding: 0 6px !important;
+  color: var(--text-2) !important;
+  background: rgba(255, 255, 255, 0.025) !important;
+  border-radius: 999px !important;
+  font-size: 10.8px !important;
+  font-weight: 650 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+#userinfo #userinfo_username > #us_pop a:hover,
+#userinfo #userinfo_username > #nav_useredit > a:hover,
+#userinfo #userinfo_username > #nav_logout > a:hover {
+  color: var(--text) !important;
+  background: rgba(121, 255, 143, 0.13) !important;
+}
+
+#menu ul {
+  padding-right: 5px !important;
+}
+
 @media (max-width: 900px) {
   #userinfo #userinfo_username {
     position: static !important;
