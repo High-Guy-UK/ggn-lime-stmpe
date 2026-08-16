@@ -3359,148 +3359,6 @@ ol {
   gap: 0 !important;
 }
 
-#userinfo_username {
-  position: absolute !important;
-  top: 112px !important;
-  right: clamp(22px, 3vw, 46px) !important;
-  z-index: 20 !important;
-  display: block !important;
-  width: 126px !important;
-  min-width: 126px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: transparent !important;
-  border: 0 !important;
-  overflow: visible !important;
-}
-
-#userinfo_username::before {
-  content: "Prism16";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 34px;
-  padding: 0 28px 0 13px;
-  color: var(--text) !important;
-  background: transparent;
-  border-radius: 9px;
-  font-family: var(--fd);
-  font-size: 12.5px;
-  font-weight: 700;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-#userinfo_username::after {
-  content: "expand_more";
-  position: absolute;
-  top: 9px;
-  right: 9px;
-  color: var(--accent-bright);
-  font-family: "Material Symbols Rounded";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-  pointer-events: none;
-}
-
-#userinfo_username:hover::before,
-#userinfo_username:focus-within::before {
-  background: var(--grad-accent-soft) !important;
-  box-shadow: inset 0 0 0 1px var(--accent-line);
-}
-
-#userinfo_username > li {
-  display: none !important;
-}
-
-#userinfo_username:hover > li,
-#userinfo_username:focus-within > li {
-  display: flex !important;
-}
-
-#userinfo_username:hover,
-#userinfo_username:focus-within {
-  padding-top: 36px !important;
-}
-
-#userinfo_username:hover::before,
-#userinfo_username:focus-within::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-}
-
-#userinfo_username:hover > li,
-#userinfo_username:focus-within > li {
-  width: 100% !important;
-  min-height: 30px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background: rgba(8, 16, 10, 0.96) !important;
-  border-right: 1px solid rgba(121, 255, 143, 0.35) !important;
-  border-left: 1px solid rgba(121, 255, 143, 0.35) !important;
-  border-radius: 0 !important;
-}
-
-#userinfo_username:hover > li:first-of-type,
-#userinfo_username:focus-within > li:first-of-type {
-  border-top: 1px solid rgba(121, 255, 143, 0.35) !important;
-  border-top-left-radius: 9px !important;
-  border-top-right-radius: 9px !important;
-}
-
-#userinfo_username:hover > li:last-of-type,
-#userinfo_username:focus-within > li:last-of-type {
-  border-bottom: 1px solid rgba(121, 255, 143, 0.35) !important;
-  border-bottom-left-radius: 9px !important;
-  border-bottom-right-radius: 9px !important;
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.38) !important;
-}
-
-#userinfo_username:hover > li > a,
-#userinfo_username:focus-within > li > a,
-#userinfo_username:hover > li strong > a,
-#userinfo_username:focus-within > li strong > a,
-#userinfo_username:hover #nav_donate,
-#userinfo_username:focus-within #nav_donate {
-  display: flex !important;
-  align-items: center !important;
-  width: 100% !important;
-  min-height: 30px !important;
-  padding: 0 12px !important;
-  color: var(--text-1) !important;
-  font-size: 12px !important;
-  line-height: 1 !important;
-}
-
-#userinfo_username:hover > li,
-#userinfo_username:focus-within > li {
-  font-size: 0 !important;
-}
-
-#userinfo_username:hover > li > a,
-#userinfo_username:focus-within > li > a,
-#userinfo_username:hover > li strong > a,
-#userinfo_username:focus-within > li strong > a,
-#userinfo_username:hover #nav_donate span,
-#userinfo_username:focus-within #nav_donate span {
-  font-size: 12px !important;
-}
-
-#userinfo_username:hover #nav_useredit > a::before,
-#userinfo_username:focus-within #nav_useredit > a::before,
-#userinfo_username:hover #nav_logout > a::before,
-#userinfo_username:focus-within #nav_logout > a::before {
-  content: none !important;
-}
-
-#userinfo_username:hover > li:hover,
-#userinfo_username:focus-within > li:hover {
-  background: rgba(121, 255, 143, 0.11) !important;
-}
-
 #userinfo_stats {
   grid-column: 1;
   grid-row: 1;
@@ -3541,189 +3399,10 @@ ol {
   padding-right: 136px !important;
 }
 
-@media (max-width: 900px) {
-  #userinfo_username {
-    position: static !important;
-    top: auto !important;
-    right: auto !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    width: auto !important;
-    min-width: 0 !important;
-    padding: 0 !important;
-  }
-
-  #userinfo_username::before,
-  #userinfo_username::after {
-    content: none !important;
-    display: none !important;
-  }
-
-  #userinfo_username > li,
-  #userinfo_username:hover > li,
-  #userinfo_username:focus-within > li {
-    display: inline-flex !important;
-    width: auto !important;
-    min-height: 23px !important;
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-
-  #menu ul {
-    padding-right: 5px !important;
-  }
-}
-
 #menu a {
   padding: 8px 13px !important;
   border-radius: 9px !important;
   font-size: 12.5px !important;
-}
-
-/* Use GGn's real user popover as the menu-end account dropdown. */
-#userinfo #userinfo_username {
-  position: absolute !important;
-  top: 112px !important;
-  right: clamp(22px, 3vw, 46px) !important;
-  z-index: 40 !important;
-  display: block !important;
-  width: 126px !important;
-  min-width: 126px !important;
-  height: 34px !important;
-  min-height: 34px !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow: visible !important;
-  background: transparent !important;
-  border: 0 !important;
-}
-
-#userinfo #userinfo_username:hover,
-#userinfo #userinfo_username:focus-within {
-  padding: 0 !important;
-}
-
-#userinfo #userinfo_username::before,
-#userinfo #userinfo_username::after {
-  content: none !important;
-  display: none !important;
-}
-
-#userinfo #userinfo_username > li,
-#userinfo #userinfo_username > div {
-  display: none !important;
-}
-
-#userinfo #userinfo_username > #nav_userinfo {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 126px !important;
-  height: 34px !important;
-  min-height: 34px !important;
-  margin: 0 !important;
-  padding: 0 27px 0 11px !important;
-  color: var(--text) !important;
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 9px !important;
-  box-shadow: none !important;
-  font-size: 0 !important;
-  line-height: 1 !important;
-  white-space: nowrap !important;
-}
-
-#userinfo #userinfo_username > #nav_userinfo::before {
-  content: "account_circle";
-  margin: 0 6px 0 0;
-  color: var(--accent-bright);
-  font-family: "Material Symbols Rounded";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-#userinfo #userinfo_username > #nav_userinfo::after {
-  content: "expand_more";
-  position: absolute;
-  top: 9px;
-  right: 9px;
-  color: var(--accent-bright);
-  font-family: "Material Symbols Rounded";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1;
-  pointer-events: none;
-}
-
-#userinfo #userinfo_username > #nav_userinfo .username {
-  color: var(--text) !important;
-  font-size: 12.5px !important;
-  font-weight: 700 !important;
-}
-
-#userinfo #userinfo_username:hover > #nav_userinfo,
-#userinfo #userinfo_username:focus-within > #nav_userinfo {
-  background: var(--grad-accent-soft) !important;
-  box-shadow: inset 0 0 0 1px var(--accent-line) !important;
-}
-
-#userinfo #userinfo_username > #us_pop {
-  position: absolute !important;
-  top: 38px !important;
-  right: 0 !important;
-  z-index: 60 !important;
-  flex-direction: column !important;
-  width: 184px !important;
-  min-width: 184px !important;
-  height: auto !important;
-  margin: 0 !important;
-  padding: 5px !important;
-  overflow: hidden !important;
-  background: rgba(8, 16, 10, 0.97) !important;
-  border: 1px solid rgba(121, 255, 143, 0.36) !important;
-  border-radius: 10px !important;
-  box-shadow:
-    0 18px 38px rgba(0, 0, 0, 0.46),
-    0 0 18px rgba(121, 255, 143, 0.12) !important;
-}
-
-#userinfo #userinfo_username:hover > #us_pop,
-#userinfo #userinfo_username:focus-within > #us_pop,
-#userinfo #userinfo_username > #us_pop:hover {
-  display: flex !important;
-}
-
-#userinfo #userinfo_username > #us_pop span {
-  display: block !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-#userinfo #userinfo_username > #us_pop a {
-  display: flex !important;
-  align-items: center !important;
-  width: 100% !important;
-  min-height: 30px !important;
-  padding: 0 10px !important;
-  color: var(--text-1) !important;
-  border-radius: 7px !important;
-  font-size: 12px !important;
-  font-weight: 650 !important;
-  line-height: 1 !important;
-  text-decoration: none !important;
-}
-
-#userinfo #userinfo_username > #us_pop a:hover {
-  color: var(--text) !important;
-  background: rgba(121, 255, 143, 0.12) !important;
-}
-
-#userinfo #userinfo_username > #nav_useredit,
-#userinfo #userinfo_username > #nav_logout,
-#userinfo #userinfo_username > #nav_donate {
-  display: none !important;
 }
 
 /* Expanded right-side account card; no hover behavior. */
@@ -3749,9 +3428,7 @@ ol {
   padding-top: 3px !important;
 }
 
-#userinfo #userinfo_username,
-#userinfo #userinfo_username:hover,
-#userinfo #userinfo_username:focus-within {
+#userinfo #userinfo_username {
   position: absolute !important;
   top: 22px !important;
   right: clamp(22px, 3vw, 46px) !important;
@@ -3784,11 +3461,7 @@ ol {
 }
 
 #userinfo #userinfo_username > li,
-#userinfo #userinfo_username > div,
-#userinfo #userinfo_username:hover > li,
-#userinfo #userinfo_username:hover > div,
-#userinfo #userinfo_username:focus-within > li,
-#userinfo #userinfo_username:focus-within > div {
+#userinfo #userinfo_username > div {
   display: flex !important;
 }
 
@@ -3897,9 +3570,7 @@ ol {
   line-height: 1;
 }
 
-#userinfo #userinfo_username > #us_pop,
-#userinfo #userinfo_username:hover > #us_pop,
-#userinfo #userinfo_username:focus-within > #us_pop {
+#userinfo #userinfo_username > #us_pop {
   position: static !important;
   grid-column: 1 / -1 !important;
   grid-row: 2 !important;
@@ -3943,21 +3614,12 @@ ol {
   white-space: nowrap !important;
 }
 
-#userinfo #userinfo_username > #us_pop a:hover,
-#userinfo #userinfo_username > #nav_useredit > a:hover,
-#userinfo #userinfo_username > #nav_logout > a:hover {
-  color: var(--text) !important;
-  background: rgba(121, 255, 143, 0.13) !important;
-}
-
 #menu ul {
   padding-right: 5px !important;
 }
 
 /* Final GGn header card layout: always visible, no hover dependency. */
-#userinfo #userinfo_username,
-#userinfo #userinfo_username:hover,
-#userinfo #userinfo_username:focus-within {
+#userinfo #userinfo_username {
   display: grid !important;
   width: 640px !important;
   min-width: 640px !important;
@@ -4683,6 +4345,13 @@ ol {
   box-shadow: none !important;
   filter: none !important;
   text-shadow: none !important;
+  transition: none !important;
+}
+
+#userinfo #userinfo_username *,
+#userinfo #userinfo_username *::before,
+#userinfo #userinfo_username *::after {
+  transition: none !important;
 }
 
 #userinfo #userinfo_username > #nav_userinfo,
